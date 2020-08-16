@@ -1,0 +1,34 @@
+SELECT *
+FROM transactions;
+
+SELECT sum(money_in)
+FROM transactions;
+
+SELECT sum(money_out)
+FROM transactions;
+
+SELECT count(money_in)
+FROM transactions;
+
+SELECT count(money_in)
+FROM transactions
+where currency='BIT';
+
+SELECT max(money_in),max(money_out)
+FROM transactions;
+
+SELECT avg (money_in)
+FROM transactions
+where currency='ETH';
+
+SELECT date,avg (money_in),avg(money_out)
+FROM transactions
+group by date;
+
+SELECT date,
+       round(avg (money_in),2) as 'Average Buy',
+       round(avg(money_out),2) as 'Average Sell'
+FROM transactions
+group by date;
+
+

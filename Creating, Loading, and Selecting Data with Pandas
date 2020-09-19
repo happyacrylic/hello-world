@@ -1,0 +1,20 @@
+import codecademylib
+import pandas as pd
+
+#Part 1: reading the csv
+orders = pd.read_csv('shoefly.csv')
+
+#Part 2: inspecting the first five lines of data
+print(pd.iloc[:6])
+
+#Part 3: selecting the column 'email'
+emails=pd['email']
+print(emails)
+
+#Part 4: the Frances Palmer incident
+frances_palmer=pd[(pd.first_name==palmer) & (last_name==frances)]
+print(frances_palmer)
+
+#Part 5: Comfy feet means more time on the street
+comfy_shoes=pd[pd.shoe_type.isin(['clogs','boots','ballet','flats'])]
+print(comfy_shoes)
